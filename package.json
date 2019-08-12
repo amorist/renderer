@@ -1,0 +1,25 @@
+{
+  "name": "renderer",
+  "version": "0.0.1",
+  "description": "ssr",
+  "author": "Amor <amor90s.zhang@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url": "git@github.com:amorist/renderer.git"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "homepage": "https://github.com/amorist/renderer/issues",
+  "bugs": {
+    "url": "https://github.com/amorist/renderer/issues"
+  },
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-server-renderer": "^2.6.10"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.1"
+  }
+}
