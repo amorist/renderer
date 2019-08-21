@@ -9,7 +9,7 @@
 import Vue from 'vue';
 import { createRenderer } from 'vue-server-renderer';
 
-export async function Renderer(baseTemplate: string, context: object, data: object, template: string): Promise<{}> {
+export async function Renderer(baseTemplate: string, context: object, data: object, template: string): Promise<any> {
     return new Promise((resolve, reject) => {
         const renderer = createRenderer({
             template: baseTemplate,
@@ -28,7 +28,7 @@ export async function Renderer(baseTemplate: string, context: object, data: obje
     });
 }
 
-export async function RendererTemplate(data: object, template: string): Promise<{}> {
+export async function RendererTemplate(data: object, template: string): Promise<any> {
     return new Promise((resolve, reject) => {
         const renderer = createRenderer();
         const app = new Vue({
