@@ -1,14 +1,17 @@
 {
   "name": "template-renderer",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "description": "ssr",
   "author": "Amor <amor90s.zhang@gmail.com>",
   "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "type" : "git",
     "url": "git@github.com:amorist/renderer.git"
   },
   "scripts": {
+    "prepublish": "npm run build",
     "build": "tsc"
   },
   "homepage": "https://github.com/amorist/renderer/issues",
