@@ -10,36 +10,36 @@ import Vue from 'vue';
 import { createRenderer } from 'vue-server-renderer';
 
 export async function Renderer(baseTemplate: string, context: object, data: object, template: string) {
-  return new Promise((resolve, reject) => {
-      const renderer = createRenderer({
-          template: baseTemplate,
+    return new Promise((resolve, reject) => {
+        const renderer = createRenderer({
+            template: baseTemplate,
         });
-      const app = new Vue({
-          data,
-          template,
+        const app = new Vue({
+            data,
+            template,
         });
-      renderer.renderToString(app, context, (err, html) => {
-          if (err) {
-              reject(err);
+        renderer.renderToString(app, context, (err, html) => {
+            if (err) {
+                reject(err);
             } else {
-              resolve(html);
+                resolve(html);
             }
         });
     });
 }
 
 export async function RendererTemplate(data: object, template: string) {
-  return new Promise((resolve, reject) => {
-      const renderer = createRenderer();
-      const app = new Vue({
-          data,
-          template,
+    return new Promise((resolve, reject) => {
+        const renderer = createRenderer();
+        const app = new Vue({
+            data,
+            template,
         });
-      renderer.renderToString(app, (err, html) => {
-          if (err) {
-              reject(err);
+        renderer.renderToString(app, (err, html) => {
+            if (err) {
+                reject(err);
             } else {
-              resolve(html);
+                resolve(html);
             }
         });
     });
